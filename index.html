@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clinica CodoaCodo</title>
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/estilo_index.css">
+  <!-- Javascript -->
+  <script src="JS/script_form.js"></script>
+  <script src="JS/api.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h2 class="logo"><a href="index.html"><img src="img/logo_nuevo2.png" alt=""></a></h2>
+      <input type="checkbox" id="check">
+      <label for="check" class="mostrar-menu">&#8801</label>
+      <nav class="menu">
+        <a href="la_clinica.html">La Clinica</a>
+        <a href="servicios.html">Servicios Médicos</a>
+        <a href="turnos.html">Turnos</a>
+        <label for="check" class="esconder-menu"> 
+          &#215 <!--Este es el código ASCII correspondiente al icono menu hamburguesa -->
+        </label>
+      </nav>
+    </header>
+
+    <main class="content">
+      <div class="embed-container">
+        <iframe src="https://www.youtube.com/embed/WheDj5cIakE" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="izquierda">
+        <!--  Etiquetas y muestra datos de la API -->
+        <div class="api">
+          <h1><u>CLIMA EN LA CIUDAD</u></h1>
+          <i class="fa-solid fa-earth-americas"></i> <span id="timezone"></span> <br>
+          <strong> <i style="color:black; text-decoration: underline; font-size:20px;"
+              class="fa-solid fa-calendar-days"> FECHA:</i></strong> <span id="current.time"></span> <br>
+          <strong> <i style="color:black; text-decoration: underline; font-size:20px;"
+              class="fa-solid fa-temperature-three-quarters">TEMP ACTUAL:</i> </strong> <span
+            id="current.temperature_2m"></span>
+          <span id="current_units.temperature_2m"></span> <br>
+          <strong> <i style="color:black; text-decoration: underline; font-size:20px;" class="fa-solid fa-wind">VEL DEL
+              VIENTO:</i></strong> <span id="current.windspeed_10m"></span>
+          <span id="current_units.windspeed_10m"></span> <br>
+          <strong> <i style="color:black; text-decoration: underline; font-size:20px;"
+              class="fa-solid fa-compass">DIRECCION DEL VIENTO:</i></strong> <span
+            id="current.winddirection_10m"></span>
+          <span id="current_units.winddirection_10m"></span> <br>
+          <strong> <i style="color:black; text-decoration: underline; font-size:20px;"
+              class="fa-solid fa-water">HUMEDAD:</i></strong> <span id="current.relativehumidity_2m"></span>
+          <span id="current_units.relativehumidity_2m"></span> <br>
+        </div>
+      </div>
+    </main>
+
+    <aside class="sidebar">
+      <div>
+        <img src="img/index01.jpg" alt="">
+        <p>Las mejores herramientas a disposición de los mejores médicos.</p>
+      </div>
+      <div>
+        <img src="img/index02.jpg" alt="">
+        <p>Todo tipo de protesis y tratamientos odonlológicos.</p>
+      </div>
+      <div>
+        <img src="img/index03.jpg" alt="">
+        <p>Radioterapia cuenta con equipos de última tecnología.</p>
+      </div>
+    </aside>
+
+
+    <div class="related-post">
+      <div class="post"><a href="tarjet/doc_1.html"><img src="./img/Cuadrado Cardiologia.png" alt="cardio"
+            class="img"></a></div>
+    </div>
+    <div class="related-post">
+      <div class="post"><a href="tarjet/radio.html"><img src="./img/Cuadrado Radioterapia.png" alt="Radioterapia"
+            class="img"></a></div>
+    </div>
+    <div class="related-post">
+      <div class="post"><a href="tarjet/traumatologia.html"><img src="./img/Cuadrado Traumatología.png"
+            alt="Traumatologia" class="img"></a></div>
+    </div>
+    <div class="related-post">
+      <div class="post"> <a href="tarjet/odonto.html"><img src="./img/Cuadrado Odontología.png" alt="Odontología"
+            class="img"></a></div>
+    </div>
+    <div class="related-post">
+      <div class="post"><a href="tarjet/oftalmo.html"><img src="./img/Cuadrado Oftalmología.png" alt="Oftalmologia"
+            class="img"></a></div>
+    </div>
+
+
+    <section id="contacto">
+      <h4>Contacta con nosotros</h4>
+      <form action="" onsubmit='return validar()'>
+        <div class="datos-form">
+          <div class="nombre">
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" onblur='validarNombre()' placeholder="Nombre">
+          </div>
+          <div class="email">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" onblur='validarEmail()' placeholder="E-mail">
+          </div>
+        </div>
+        <div class="mensaje">
+          <label for="mensaje">
+            <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"
+              onblur='validarConsulta()'></textarea>
+
+          </label>
+        </div>
+        <div class="boton-formulario">
+          <a href="#" class="boton-saber-mas">ENVIAR MENSAJE</a>
+        </div>
+      </form>
+    </section>
+    <footer class="footer">
+      <h4>CLINICA CODOACODO <span>Esperanza 114, Buenos Aires</span></h4>
+      <a href="/index.html">Inicio</a>
+    </footer>
+  </div>
+</body>
+
+</html>
