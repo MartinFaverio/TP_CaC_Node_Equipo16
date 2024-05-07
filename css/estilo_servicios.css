@@ -31,7 +31,6 @@ body {
     max-width: 1000px;
     margin: .5em auto;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     /*Se establece una grilla de 5 columnas de 1 fraccion*/
     gap: .5em;
     /* La separacion entre las celdas es de 1em */

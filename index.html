@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -9,10 +9,8 @@
   <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
   <!-- CSS -->
   <link rel="stylesheet" href="./css/estilo_index.css">
-  <!-- Javascript -->
-  <script src="JS/script_form.js"></script>
-  <script src="JS/api.js"></script>
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
@@ -20,13 +18,14 @@
     <header class="header">
       <h2 class="logo"><a href="index.html"><img src="img/logo_nuevo2.png" alt=""></a></h2>
       <input type="checkbox" id="check">
-      <label for="check" class="mostrar-menu">&#8801</label>
+      <label for="check" class="mostrar-menu">&#8801;</label>
       <nav class="menu">
         <a href="la_clinica.html">La Clinica</a>
         <a href="servicios.html">Servicios Médicos</a>
+        <a href="noticias.html">Noticias</a>
         <a href="turnos.html">Turnos</a>
-        <label for="check" class="esconder-menu"> 
-          &#215 <!--Este es el código ASCII correspondiente al icono menu hamburguesa -->
+        <label for="check" class="esconder-menu">
+          &#215;<!--Este es el código ASCII correspondiente al icono menu hamburguesa -->
         </label>
       </nav>
     </header>
@@ -35,95 +34,111 @@
       <div class="embed-container">
         <iframe src="https://www.youtube.com/embed/WheDj5cIakE" frameborder="0" allowfullscreen></iframe>
       </div>
-
-      <div class="izquierda">
-        <!--  Etiquetas y muestra datos de la API -->
-        <div class="api">
-          <h1><u>CLIMA EN LA CIUDAD</u></h1>
-          <i class="fa-solid fa-earth-americas"></i> <span id="timezone"></span> <br>
-          <strong> <i style="color:black; text-decoration: underline; font-size:20px;"
-              class="fa-solid fa-calendar-days"> FECHA:</i></strong> <span id="current.time"></span> <br>
-          <strong> <i style="color:black; text-decoration: underline; font-size:20px;"
-              class="fa-solid fa-temperature-three-quarters">TEMP ACTUAL:</i> </strong> <span
-            id="current.temperature_2m"></span>
-          <span id="current_units.temperature_2m"></span> <br>
-          <strong> <i style="color:black; text-decoration: underline; font-size:20px;" class="fa-solid fa-wind">VEL DEL
-              VIENTO:</i></strong> <span id="current.windspeed_10m"></span>
-          <span id="current_units.windspeed_10m"></span> <br>
-          <strong> <i style="color:black; text-decoration: underline; font-size:20px;"
-              class="fa-solid fa-compass">DIRECCION DEL VIENTO:</i></strong> <span
-            id="current.winddirection_10m"></span>
-          <span id="current_units.winddirection_10m"></span> <br>
-          <strong> <i style="color:black; text-decoration: underline; font-size:20px;"
-              class="fa-solid fa-water">HUMEDAD:</i></strong> <span id="current.relativehumidity_2m"></span>
-          <span id="current_units.relativehumidity_2m"></span> <br>
-        </div>
-      </div>
     </main>
 
     <aside class="sidebar">
-      <div>
-        <img src="img/index01.jpg" alt="">
-        <p>Las mejores herramientas a disposición de los mejores médicos.</p>
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/index01.jpg" class="d-block w-100" alt="Imagen herramientas">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Las mejores herramientas a disposición de los mejores médicos.</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/index02.jpg" class="d-block w-100" alt="Imagen protesis">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Todo tipo de protesis y tratamientos odonlológicos.</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="img/index03.jpg" class="d-block w-100" alt="Imagen Radioterapia">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Radioterapia cuenta con equipos de última tecnología.</h5>
+            </div>
+          </div>
+        </div>
       </div>
-      <div>
-        <img src="img/index02.jpg" alt="">
-        <p>Todo tipo de protesis y tratamientos odonlológicos.</p>
-      </div>
-      <div>
-        <img src="img/index03.jpg" alt="">
-        <p>Radioterapia cuenta con equipos de última tecnología.</p>
-      </div>
+
     </aside>
 
 
-    <div class="related-post">
-      <div class="post"><a href="tarjet/doc_1.html"><img src="./img/Cuadrado Cardiologia.png" alt="cardio"
-            class="img"></a></div>
+    <div class="post related-post">
+      <a href="tarjet/doc_1.html"><img src="./img/Cuadrado_Cardiologia.png" alt="Logo Cardiologia" class="img"></a>
     </div>
-    <div class="related-post">
-      <div class="post"><a href="tarjet/radio.html"><img src="./img/Cuadrado Radioterapia.png" alt="Radioterapia"
-            class="img"></a></div>
+    <div class="post related-post">
+      <a href="tarjet/radio.html"><img src="./img/Cuadrado_Radioterapia.png" alt="Logo Radioterapia" class="img"></a>
     </div>
-    <div class="related-post">
-      <div class="post"><a href="tarjet/traumatologia.html"><img src="./img/Cuadrado Traumatología.png"
-            alt="Traumatologia" class="img"></a></div>
+    <div class="post related-post">
+      <a href="tarjet/traumatologia.html"><img src="./img/Cuadrado_Traumatologia.png" alt="Logo Traumatologia"
+          class="img"></a>
     </div>
-    <div class="related-post">
-      <div class="post"> <a href="tarjet/odonto.html"><img src="./img/Cuadrado Odontología.png" alt="Odontología"
-            class="img"></a></div>
+    <div class="post related-post">
+      <a href="tarjet/odonto.html"><img src="./img/Cuadrado_Odontologia.png" alt="Logo Odontología" class="img"></a>
     </div>
-    <div class="related-post">
-      <div class="post"><a href="tarjet/oftalmo.html"><img src="./img/Cuadrado Oftalmología.png" alt="Oftalmologia"
-            class="img"></a></div>
+    <div class="post related-post">
+      <a href="tarjet/oftalmo.html"><img src="./img/Cuadrado_Oftalmologia.png" alt="Logo Oftalmologia" class="img"></a>
     </div>
 
 
     <section id="contacto">
       <h4>Contacta con nosotros</h4>
-      <form action="" onsubmit='return validar()'>
-        <div class="datos-form">
-          <div class="nombre">
-            <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre" onblur='validarNombre()' placeholder="Nombre">
-          </div>
-          <div class="email">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" onblur='validarEmail()' placeholder="E-mail">
+      <div class="row">
+        <div class="col-md-4 d-flex justify-content-center">
+          <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="/img/contacto.png" alt="">
+            <p class="lead">Trabajamos día a día para mejorar nuestro servicio
+              y garantizar la plena satisfacción de nuestros pacientes.</p>
           </div>
         </div>
-        <div class="mensaje">
-          <label for="mensaje">
-            <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"
-              onblur='validarConsulta()'></textarea>
+        <div class="col-md-8">
+          <form action="" onsubmit='validar()'>
+            <div class="datos-form">
+              <div class="nombre">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" onblur='validarNombre()' placeholder="Nombre">
+              </div>
+              <div class="email">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" onblur='validarEmail()' placeholder="E-mail">
+              </div>
+              <div class="email">
+                <label for="telefono">Telefono</label>
+                <input type="text" name="telefono" id="telefono" onblur='validarEmail()' placeholder="Telefono">
+              </div>
+            </div>
 
-          </label>
+            <div class="email">
+              <span class="input-group-text" id="basic-addon1">Contactarme por</span>
+              <select name="telefono" id="telefono">
+                <option selected>Elige una opcion...</option>
+                <option value="email">E-mail</option>
+                <option value="telefono">Telefono</option>
+              </select>
+            </div>
+
+
+            <div class="mensaje">
+              <label for="mensaje">
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje"
+                  onblur='validarConsulta()'></textarea>
+              </label>
+            </div>
+            <div class="form-check text-start my-3 ">
+              <input class="form-check-input" type="checkbox" value="" id="noticias">
+              <label class="form-check-label" for="noticias">
+                Acepto recibir noticias y actualizaciones via mail.
+              </label>
+            </div>
+            <div class="boton-formulario">
+              <a href="#" class="boton-saber-mas">ENVIAR MENSAJE</a>
+            </div>
+          </form>
         </div>
-        <div class="boton-formulario">
-          <a href="#" class="boton-saber-mas">ENVIAR MENSAJE</a>
-        </div>
-      </form>
+      </div>
     </section>
+
     <footer class="footer">
       <h4>CLINICA CODOACODO <span>Esperanza 114, Buenos Aires</span></h4>
       <a href="/index.html">Inicio</a>

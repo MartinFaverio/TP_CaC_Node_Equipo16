@@ -9,11 +9,6 @@ const REGEX_CORREO = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 const BORDE_ERROR = 'rgb(255, 0, 0)';
 const BORDE_OK = '#FFFFFF';
 
-
-// Funciones de validación
-
-
-// Si el campo nombre tiene menos de <LONG_MIN_NOMBRE> caracteres, el fondo cambia a <BORDE_ERROR>
 function validarNombre() {
     let valido = false;
     const nombre = document.getElementById('nombre');
@@ -28,25 +23,6 @@ function validarNombre() {
     return valido;
 }
 
-/*
-// Si el campo apellido tiene menos de <LONG_MIN_APELLIDO> caracteres, el fondo cambia a <BORDE_ERROR>
-function validarApellido() {
-    let valido = false;
-    const apellido = document.getElementById('apellido');
-
-    if (apellido.value.length < LONG_MIN_APELLIDO) {
-        apellido.style.borderColor = BORDE_ERROR;
-    } else {
-        apellido.style.borderColor = BORDE_OK;
-        valido = true;
-    }
-
-    return valido;
-}
-
-*/
-
-// Si el campo email no matchea con la <REGEX_CORREO>, el fondo cambia a <BORDE_ERROR>
 function validarEmail() {
     let valido = false;
     const email = document.getElementById('email');

@@ -23,26 +23,6 @@ body {
 
 }
 
-/*agregado para api*/
-
-
-.contenedor .izquierda {
-    grid-area: izquierda;
-    margin-left: 6%;
-}
-
-/* Para la API*/
-.contenedor .izquierda .api {
-    color: black;
-    position: relative;
-    margin-left: 1%;
-    margin-top: 40%;
-
-
-}
-
-/* fin agregado para api*/
-
 /*IFRAME DEL VIDEO PARA RESPONSIVE */
 .embed-container {
     position: relative;
