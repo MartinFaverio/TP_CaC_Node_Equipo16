@@ -8,40 +8,14 @@ body {
     /* background: #eee; */
     /* background-color: #ecf0f1; */
     /* Para el fondo de la pantalla se usó un patron obtenido en: https://freefrontend.com/css-background-patterns/ */
-    background: radial-gradient(black 3px, transparent 4px),
-        radial-gradient(black 3px, transparent 4px),
-        linear-gradient(#fff 4px, transparent 0),
-        linear-gradient(45deg, transparent 74px,
-            transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
-        linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
-        #fff;
-    background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
-    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-    color: #000000;
+    background-size: cover;
+    background-image: radial-gradient(rgb(0, 66, 88) 20%, rgb(20, 44, 44));
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     /* font-family: 'Manjari', sans-serif; */
 
 }
 
-/*agregado para api*/
 
-
-.contenedor .izquierda {
-    grid-area: izquierda;
-    margin-left: 6%;
-}
-
-/* Para la API*/
-.contenedor .izquierda .api {
-    color: black;
-    position: relative;
-    margin-left: 1%;
-    margin-top: 40%;
-
-
-}
-
-/* fin agregado para api*/
 
 /*IFRAME DEL VIDEO PARA RESPONSIVE */
 .embed-container {
@@ -64,52 +38,24 @@ body {
 /* CONTAINER */
 
 .container {
-    width: 95%;
-    max-width: 1000px;
-    margin: .5em auto;
+    width: 100vw;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     /*Se establece una grilla de 5 columnas de 1 fraccion*/
-    gap: .5em;
+    gap: 1em;
     /* La separacion entre las celdas es de 1em */
 
 }
 
 /* _______________________________________________________________________ */
 
-/* post */
-
-.container>.related-post {
-    background: rgb(0, 66, 88) 30%;
-    border-radius: 10px;
-    border: 2px solid #000;
-    color: #ffffff;
-    height: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s ease;
-}
-
-
-.related-post:hover {
-    cursor: pointer;
-    color: #000000;
-    background: #ffffff;
-}
-
-.container .related-post .img {
-    width: 100%;
-}
-
-/* Fin Post */
 
 .container>.footer,
-.container>.header,
-.container>div {
-    background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
+.container>.header {
+    background: rgb(0, 66, 88);
     padding: 20px;
     border: 1px solid #000000;
+
 }
 
 
@@ -123,18 +69,21 @@ body {
 
 /* menu */
 .header {
-    height: 100px;
+    
+    height: 80px;
     background-color: #1e272e;
     padding: 0 50px;
     color: #fff;
-    display: flex;
-    justify-content: space-between;
+    display: inline-flex;
+    justify-content: start;
+    text-align: center;
     align-items: center;
 }
 
 .header>.logo img {
     max-width: 200px;
 }
+
 
 .header>.menu a {
     color: #fff;
@@ -175,42 +124,47 @@ body {
 .content {
     /* Se establece que el main va a ocupar 3 columnas y 4 filas de la grilla */
     grid-column: span 3;
-    grid-row: span 4;
+    grid-row: span 2;
     color: #faf9f9;
-    text-align: center;
-    /* background: linear-gradient(to right,rgb(0, 66, 88) 45%,  rgb(37, 44, 44)); */
-    background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 0 auto;
-}
+    height: 100%;
+    width: 100%;
 
+}
+.api {
+    padding-top: 50px;
+    font-size: 1.3rem;
+    text-align: center;
+
+}
 /* Fin Main */
 
 /* _______________________________________________________________________ */
 
 /* Aside */
 .sidebar {
+    display: grid;
     grid-column: span 2;
-    grid-row: span 4;
-    display: flex;
-    flex-direction: column;
-    background: rgb(20, 44, 44);
-    padding: 3px;
+    grid-row: span 2;
     color: #ffffff;
-
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+    text-align: center;
 }
 
 .sidebar img {
-    display: block;
+    display: flex;
     width: 100%;
-    margin: 5px auto;
+    height: 100%;
+    max-width: fit-content;
+    max-height: fit-content;
+
 }
 
 .sidebar p {
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 1.2rem;
 }
 
 /* Fin aside */
@@ -219,27 +173,31 @@ body {
 
 /* post */
 
+
 .container>.related-post {
     background: rgb(0, 66, 88) 30%;
     border-radius: 10px;
-    border: 2px solid #000;
+    max-width: 80%;
+    border: 1px solid #000;
     color: #ffffff;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: all 0.5s ease;
+    padding: 10px;
+    margin: 20px;
 }
 
 
 .related-post:hover {
     cursor: pointer;
     color: #000000;
-    background: #ffffff;
+    background: rgb(9, 104, 135) 10%;
 }
 
 .container .related-post .img {
+    max-width: fit-content;
+    max-height: fit-content;
     width: 100%;
+    height: 100%;
+
 }
 
 /* Fin Post */
@@ -256,7 +214,7 @@ body {
     border-radius: 10px;
     border: 2px solid #000;
     color: #ffffff;
-    height: 200px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -274,7 +232,6 @@ body {
 #contacto {
     grid-column: span 5;
     grid-row: span 4;
-    background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
     padding: 50px 0px;
     color: #fff;
 }
@@ -426,7 +383,7 @@ form textarea::placeholder {
     }
 
     .menu {
-        position: fixed;
+        position: sticky;
         width: 100%;
         height: 100vh;
         background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
@@ -434,7 +391,7 @@ form textarea::placeholder {
         top: 0;
         text-align: center;
         padding: 100px 0px;
-        z-index: 100;
+        
         transition: 0.8s;
     }
 
@@ -510,7 +467,7 @@ form textarea::placeholder {
     }
 
     .menu {
-        position: fixed;
+        position: sticky;
         width: 100%;
         height: 100vh;
         background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
