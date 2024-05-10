@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios</title>
+  <!-- Link para el FAVICON -->
+  <link rel="icon" type="image/png" sizes="300x300" href="./img/hospital.png">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css?family=Manjari&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/estilo_servicios.css">
+  <!-- JS -->
+  <script src="/JS/script_servicios.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h2 class="logo"><a href="index.html"><img src="img/logo_nuevo2.png" alt=""></a></h2>
+      <input type="checkbox" id="check">
+      <label for="check" class="mostrar-menu">&#8801</label>
+      <nav class="menu">
+        <a href="la_clinica.html">La Clinica</a>
+        <a href="turnos.html">Turnos</a>
+        <a href="index.html">Inicio</a>
+
+        <label for="check" class="esconder-menu">
+          &#215 <!--Este es el código ASCII correspondiente al icono menu hamburguesa -->
+        </label>
+      </nav>
+    </header>
+
+    <main>
+      <div class="content">
+        <div class="side-nav">
+
+          <button class=boton onclick="toggleText('cardiologia')">
+            Cardiología
+          </button>
+          <button class=boton onclick="toggleText('odontologia')">
+            Odontología
+          </button>
+          <button class=boton onclick="toggleText('oftalmologia')">
+            Oftalmología
+          </button>
+          <button class=boton onclick="toggleText('radioterapia')">
+            Radioterapia
+          </button>
+          <button class=boton onclick="toggleText('traumatologia')">
+            Traumatología
+          </button>
+
+          <a class="reserva" href="turnos.html">RESERVA TU TURNO</a>
+
+        </div>
+
+        <div class="informacion">
+                    
+          <div class="hide" id="cardiologia">
+            <h2 class="titulo_info">Cardiología</h2>
+            <div class="foto">
+              <img src="img/cardiologia.jpg" alt="">
+            </div>
+            <div class="info">
+              <p>La cardiología es la rama de la medicina que se encarga del estudio, diagnóstico, tratamiento y
+                prevención
+                de
+                las enfermedades del corazón y los vasos sanguíneos, es decir, del aparato cardiovascular.
+                La Clínica Codo a Codo consta de un vasto equipo de médicos cardiólogos y una disposición
+                tecnológica de
+                avanzada, para la detección, control y seguimiento del paciente cardíaco.
+              </p>
+            </div>
+          </div>  
+
+
+          <div class="hide" id="odontologia">
+            <h2 class="titulo_info">Odontología</h2>
+            <div class="foto">
+              <img src="img/odontologia.jpg" alt="">
+            </div>
+            <div class="info">
+              <p>Es el servicio encargado de la salud bucal, el tratamiento, la prevención y el estudio de las
+                patologías que se vinculen con la cavidad oral.
+                La Clínica Codo a Codo cuenta con profesionales idóneos y un equipo de última generación para
+                recibir un tratamiento odontológico acorde con cada necesidad.
+              </p>
+            </div>
+          </div>
+
+          <div class="hide" id="oftalmologia">
+            <h2 class="titulo_info">Oftalmología</h2>
+            <div class="foto">
+              <img src="img/oftalmologia.jpg" alt="">
+            </div>
+            <div class="info">
+              <p>Es una especialidad que estudia y trata las enfermedades del ojo humano y sus anexos. Su objetivo
+                es el
+                diagnóstico de las enfermedades oculares, trastornos y dolencias del ojo.
+                En la Clínica Codo a Codo contamos con el mejor equipamiento para la realización de estudios,
+                controles,
+                intervenciones y un cuerpo de destacadísimos profesionales expertos en el área oftalmológica.
+              </p>
+            </div>
+          </div>
+
+          <div class="hide" id="radioterapia">
+            <h2 class="titulo_info">Radioterapia</h2>
+            <div class="foto">
+              <img src="img/radiodiagnostico.jpg" alt="">
+            </div>
+            <div class="info">
+              <p>La radioterapia es un tratamiento del cáncer que usa altas dosis de radiación para destruir
+                células
+                cancerosas y reducir tumores.
+                La Clínica Codo a Codo cuenta con equipos con tecnología de vanguardia.
+              </p>
+            </div>
+          </div>
+
+          <div class="hide" id="traumatologia">
+            <h2 class="titulo_info">Traumatología</h2>
+            <div class="foto">
+              <img src="img/traumatologia.jpg" alt="">
+            </div>
+            <div class="info">
+              <p>Se ocupa del tratamiento clínico y quirúrgico de las enfermedades del aparato
+                ósteo/articulo/muscular.
+                El trabajo del equipo médico comprende diversos campos, originados y sistematizados a partir de
+                una
+                amplia
+                variedad de afecciones: congénitas, traumáticas, degenerativas, infecciosas, inflamatorias,
+                tumorales,
+                neurogénicas y vasculopáticas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script> //Este script se encarga de obtener la variable de la espacialidad seleccionada en index.html y al terminar de cargar la pagina, ejecuta la funcion toggleText de script_servicios.js enviandole esa variable como argumento.
+        const especialidad = window.location.href.split("?")[1].split("=")[1];
+
+        if (especialidad === "cardiologia" || especialidad === "odontologia" || especialidad === "oftalmologia" || especialidad === "radioterapia" || especialidad === "traumatologia") {
+          window.onload = function(){
+            toggleText(especialidad);
+          };      
+        };
+      </script>
+
+      <script>//Este script se encarga de analizar lo seleccionado por los botones y mostrar u ocultar el material en pantalla
+        function toggleText(especialidad) {
+          const seccionInfo = document.getElementById(especialidad); // Obtener la sección de información correspondiente
+          seccionInfo.classList.toggle('hide');
+        }
+      </script>
+
+    </main>
+
+
+    <footer class="footer">
+      <h4>CLINICA CODOACODO <span>Esperanza 114, Buenos Aires</span></h4>
+      <a href="index.html">Inicio</a>
+    </footer>
+  </div>
+</body>
+
+</html>

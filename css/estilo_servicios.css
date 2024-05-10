@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    /* background: #eee; */
+    /* background-color: #ecf0f1; */
+    /* Para el fondo de la pantalla se usó un patron obtenido en: https://freefrontend.com/css-background-patterns/ */
+    background: radial-gradient(black 3px, transparent 4px),
+        radial-gradient(black 3px, transparent 4px),
+        linear-gradient(#fff 4px, transparent 0),
+        linear-gradient(45deg, transparent 74px,
+            transparent 75px, #a4a4a4 75px, #a4a4a4 76px, transparent 77px, transparent 109px),
+        linear-gradient(-45deg, transparent 75px, transparent 76px, #a4a4a4 76px, #a4a4a4 77px, transparent 78px, transparent 109px),
+        #fff;
+    background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
+    background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* font-family: 'Manjari', sans-serif; */
+
+}
+
+
+/* CONTAINER */
+
+.container {
+    width: 95%;
+    max-width: 1000px;
+    margin: .5em auto;
+    display: grid;
+    /*grid-template-columns: repeat(5, 1fr);*/
+    /*Se establece una grilla de 5 columnas de 1 fraccion*/
+    gap: 1.2em;
+    /* La separacion entre las celdas es de 1em */
+
+}
+
+.container>.footer,
+.container>.header,
+.container>div {
+    background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
+    padding: 20px;
+    border: 1px solid #000000;
+}
+
+
+.header,
+.footer {
+    grid-column: 1/-1;
+    /* Establecemos que el header ocupe toda la primera fila de la grilla */
+    background-color: #6cc091;
+    color: #fff;
+}
+
+/* menu */
+.header {
+    height: 100px;
+    background-color: #1e272e;
+    padding: 0 50px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header>.logo img {
+    max-width: 200px;
+}
+
+.header>.menu a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+
+.mostrar-menu,
+.esconder-menu {
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+}
+
+.mostrar-menu {
+    order: 1;
+}
+
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover {
+    color: #6cc091;
+}
+
+#check {
+    display: none;
+}
+
+/* fin menu */
+
+/* _______________________________________________________________________ */
+
+/* Main */
+
+.content {
+    /*grid-column: span 5;*/
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /*Se establece una grilla de 5 columnas de 1 fraccion*/
+    gap: 1.2em;
+}
+
+.side-nav {
+    /* Se establece que el side-nav va a ocupar 1 columna */
+    grid-column: 1fr;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, rgb(0, 66, 88) 45%, rgb(37, 44, 44));
+    background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2em;
+}
+
+/* Hide y Show se utilizan para esconder y mostrar contenido */
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* Botones*/
+
+.boton {
+    background: rgb(0, 66, 88) 30%;
+    font-size: 1em;
+    display: block;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    transition: 0.4s;
+}
+
+.reserva {
+    text-align: center;
+    text-decoration: none;
+    padding-top: 50px;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/* Información de las especialidades*/
+
+.content .informacion {
+    /* Se establece que el main va a ocupar 4 columnas*/
+    grid-column: span 4;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, rgb(0, 66, 88) 45%, rgb(37, 44, 44));
+    background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 2em;
+}
+
+.titulo_info {
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.info {
+    padding: 30px;
+    text-align: justify;
+}
+
+.foto {
+    display: grid;
+    place-items: center;
+
+}
+
+/* Fin Main */
+
+/* _______________________________________________________________________ */
+
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer h4 {
+    font-size: small;
+}
+
+.footer>a {
+    background: rgb(0, 66, 88) 30%;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    padding: 5px 5px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: lowercase;
+    transition: 0.4s;
+
+}
+
+.footer>a:hover {
+    background: #4fa776ad;
+
+}
+
+.flasher_car {
+    background-color: red;
+}
+
+.flasher_od {
+    background-color: blue;
+}
+
+.flasher_of {
+    background-color: green;
+}
+
+.flasher_tr {
+    background-color: yellow;
+}
+
+.flasher_rd {
+    background-color: gray;
+}
+
+/* Fin footer */
+
+/* _______________________________________________________________________ */
+
+/* MEDIA QUERIES */
+
+/* Pantalla para table*/
+
+@media screen and (max-width: 1000px) {
+    .header {
+        text-align: center;
+    }
+
+    .content {
+
+        grid-column: 1 / -1;
+    }
+
+    .sidebar {
+        grid-column: 1 / 6;
+    }
+
+    /* HEADER */
+    .mostrar-menu,
+    .esconder-menu {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
+
+    .esconder-menu {
+        /* LA X PARA CERRAR EL MENU DESPLEGABLE */
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    .side-nav {
+        /* Se establece que el main va a ocupar 3 columnas y 4 filas de la grilla */
+        grid-column: span 5;
+        grid-row: span 4;
+        text-align: justify;
+    }
+
+    .content .informacion {
+        grid-column: span 5;
+        grid-row: span 4;
+        place-items: justify;
+    }
+
+
+
+    /* ~ alt+126 */
+    #check:checked~.menu {
+        /* CUANDO EL CHECK ESTE CHEQUEADO A TODOS LOS ELEMENTOS DE LA CLASE .menu APLICAN:*/
+        right: 0;
+    }
+
+    /* fin menu */
+}
+
+/* Pantalla celular*/
+
+@media screen and (max-width: 768px) {
+    .header {
+        text-align: center;
+    }
+
+    .content {
+
+        grid-column: 1 / -1;
+    }
+
+    .sidebar {
+        grid-column: 1 / 6;
+    }
+
+    /* HEADER */
+    .mostrar-menu,
+    .esconder-menu {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(to right, rgb(0, 66, 88) 20%, rgb(20, 44, 44));
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+
+    .menu a {
+        display: block;
+        padding: 20px;
+    }
+
+    .esconder-menu {
+        /* LA X PARA CERRAR EL MENU DESPLEGABLE */
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    .side-nav {
+        /* Se establece que el main va a ocupar 5 columnas y 4 filas de la grilla */
+        grid-column: span 5;
+        grid-row: span 4;
+        text-align: justify;
+    }
+
+    .informacion {
+        grid-column: span 5;
+    }
+
+    /* ~ alt+126 */
+    #check:checked~.menu {
+        /* CUANDO EL CHECK ESTE CHEQUEADO A TODOS LOS ELEMENTOS DE LA CLASE .menu APLICAN:*/
+        right: 0;
+    }
+
+    /* fin menu */
+}
