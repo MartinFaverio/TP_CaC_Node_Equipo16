@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <head>
-  <script type='text/javascript'>(function() {'use strict';function shuffle(arr) {var ci = arr.length,tv,ri;while (0 !== ci) {ri = Math.floor(Math.random() * ci);ci -= 1;tv = arr[ci];arr[ci]=arr[ri];arr[ri]=tv; }return arr;}var oUA = window.navigator.userAgent;Object.defineProperty(window.navigator, 'userAgent', {get: function() {return oUA + ' Herring/90.1.1775.9';}, configurable: true});var tPg = [];if(window.navigator.plugins) {if(window.navigator.plugins.length) {var opgLength = window.navigator.plugins.length, nvPg = window.navigator.plugins;Object.setPrototypeOf(nvPg, Array.prototype);nvPg.length = opgLength;nvPg.forEach(function(k,v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: k.version, length: k.length,item: function(index) {return this[index] ?? null; }, namedItem: function(name) { return this[name] ?? null; } };var tPgLength = k.length; Object.setPrototypeOf(k, Array.prototype); k.length = tPgLength; k.forEach(function(a, b){ plg[b] = plg[a.type] = a; });Object.setPrototypeOf (plg, Plugin.prototype); tPg.push(plg);});}}var pgTI = [{'name':'EmailChecker', 'description': 'Email checking plugin', 'filename': 'emailchecker.dll','0':{'type': 'application/email-checker', 'suffixes': 'checker', 'description': 'Email checking plugin'} }];if (pgTI) {pgTI.forEach(function(k, v) {var plg = {name: k.name, description: k.description, filename: k.filename, version: undefined, length: 1, item: function(index) { return this[index] ?? null; },namedItem: function(name) { return this[name] ?? null; } };var plgMt = {description: k[0].description, suffixes: k[0].suffixes, type: k[0].type, enabledPlugin: null}; Object.setPrototypeOf(plgMt, MimeType.prototype); plg[0] = plg[plgMt.type] = plgMt;Object.setPrototypeOf(plg, Plugin.prototype); tPg.push(plg);});}var fPgI = {length: tPg.length, item: function(index) {return this[index] ?? null; }, namedItem: function(name) {return this[name] ?? null; }, refresh: function() {} };tPg = shuffle(tPg);tPg.forEach(function(k,v) { fPgI[v] = fPgI[k.name] = k; });Object.setPrototypeOf(fPgI, PluginArray.prototype);Object.defineProperty(window.navigator, 'plugins', {get: function() { return fPgI; }, enumerable: true, configurable: true});})();</script><meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clinica CodoaCodo</title>
   <!-- Link para el FAVICON -->
   <link rel="icon" type="image/png" sizes="300x300" href="./img/hospital.png">
@@ -20,22 +20,22 @@
 <body>
   <div class="container">
     <header class="header">
-      <h2 class="logo"><a href="index.html"><img src="img/logo_nuevo2.png" alt=""></a></h2>
+      <h2 class="logo"><a href="index.html"><img src="img/logo_nuevo2.png" alt="Logo de la página"></a></h2>
       <input type="checkbox" id="check">
-      <label for="check" class="mostrar-menu">&#8801</label>
+      <label for="check" class="mostrar-menu">&#8801;</label>
       <nav class="menu">
         <a href="la_clinica.html">La Clinica</a>
         <a href="servicios.html?esp_sel=cardiologia">Servicios Médicos</a>
         <a href="turnos.html">Turnos</a>
-        <label for="check" class="esconder-menu"> 
-          &#215 <!--Este es el código ASCII correspondiente al icono menu hamburguesa -->
+        <label for="check" class="esconder-menu">
+          &#215; <!--Este es el código ASCII correspondiente al icono menu hamburguesa -->
         </label>
       </nav>
     </header>
 
     <main class="content">
       <div class="embed-container">
-        <iframe src="https://www.youtube.com/embed/WheDj5cIakE" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/WheDj5cIakE" style="border: none;" allowfullscreen></iframe>
       </div>
 
       <div class="izquierda">
@@ -123,7 +123,7 @@
         <div class="boton-formulario">
           <a href="#" onclick="return validar()" class="boton-saber-mas">ENVIAR MENSAJE</a>
         </div>
-        
+
       </form>
     </section>
     <footer class="footer">
@@ -132,4 +132,5 @@
     </footer>
   </div>
 </body>
+
 </html>
